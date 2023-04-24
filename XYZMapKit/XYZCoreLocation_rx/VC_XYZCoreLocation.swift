@@ -7,7 +7,7 @@ import MapKit
 import SoHow
 
 import RxCoreLocation
-
+import RxMKMapView
 class VC_XYZCoreLocation: UIViewController {
     
     var View_Map           : MKMapView!       { return self.view.viewWithTag(1110001)     as? MKMapView          }
@@ -103,6 +103,21 @@ class VC_XYZCoreLocation: UIViewController {
               }
           })
           .disposed(by: disposeBag)
+        
+        
+        View_Map.rx.willStartLoadingMap
+               .asDriver()
+               .drive(onNext: {
+                   print("map started loadedloading")
+               })
+               .disposed(by: disposeBag)
+
+        View_Map.rx.didFinishLoadingMap
+               .asDriver()
+               .drive(onNext: {
+                   print("map finished loading")
+               })
+               .disposed(by: disposeBag)
         
     }
     

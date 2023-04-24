@@ -13,6 +13,8 @@ target 'XYZMapKit' do
   pod 'Alamofire'
   
   pod 'RxCoreLocation'
+  
+  pod "RxMKMapView"
 end
 
 

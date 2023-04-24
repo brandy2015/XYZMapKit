@@ -8,6 +8,9 @@ PODS:
   - RxCoreLocation/Core (1.5.1):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
+  - RxMKMapView (6.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -18,6 +21,7 @@ DEPENDENCIES:
   - Alamofire
   - RxCocoa
   - RxCoreLocation
+  - RxMKMapView
   - RxSwift
   - SoHow
   - XYZResponse
@@ -27,6 +31,7 @@ SPEC REPOS:
     - Alamofire
     - RxCocoa
     - RxCoreLocation
+    - RxMKMapView
     - RxRelay
     - RxSwift
     - SoHow
@@ -36,11 +41,12 @@ SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxCoreLocation: a78f4cbf32a4c6c47ecccbe22d41ff93b7e8c099
+  RxMKMapView: 80466fe28566084793b938b5dfec4611dfe32805
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SoHow: 0bed06cb2620b1dfc984100abb348157fd305664
   XYZResponse: 1b261e77b7fcc91e576e0c5672ac99c1cbaa459d
 
-PODFILE CHECKSUM: 72f358f63f09711c463b09de8892f188e49db9f6
+PODFILE CHECKSUM: ac6b27cfb292af2928248389f5786b2b77134140
 
 COCOAPODS: 1.12.1
