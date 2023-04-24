@@ -1,44 +1,14 @@
-//
-//  LocationUtil.swift
-//  TestLocation
-//
-//  Created by zhangzihao on 2022/2/8.
-//
-
+ 
 import UIKit
 
 import Foundation
 import CoreLocation
 
-// 参考来源：
-// http://blog.woodbunny.com/post-68.html
-// https://www.jianshu.com/p/347e4dc3d05a
-// 圆周率
-// let pi = 3.14159265358979324;
-// let pi = M_PI;
-let pi = Double.pi
-let xpi: Double = pi * 3000.0 / 180.0
-
-// 地球的平均半径
-let r = 6371004
-let a: Double = 6378245.0
-//
-let e: Double = 0.00669342162296594323
-
-extension CLLocationCoordinate2D{
-    var CLLocationx: CLLocation{
-        return CLLocation(latitude: self.latitude, longitude: self.longitude)
-    }
-}
-
-extension CLLocationCoordinate2D {
-    var transToGCJ:CLLocationCoordinate2D{  return LocationUtil.transformWGSToGCJ(wgsLocation: self) }
-}
 
 //WGS-84：是国际标准，GPS坐标（Google Earth使用、或者GPS模块）
 //GCJ-02：中国坐标偏移标准，Google Map、高德、腾讯使用
 //BD-09： 百度坐标偏移标准，Baidu Map使用
-class LocationUtil{
+class XYZLocationUtil{
     // 坐标转换 标准坐标系-> 中国坐标系
     //          WGS-84 --> GCJ-02
     // wgsLocation:     标准坐标
@@ -243,4 +213,29 @@ class LocationUtil{
         return distance;
     
     }
+}
+
+// 参考来源：
+// http://blog.woodbunny.com/post-68.html
+// https://www.jianshu.com/p/347e4dc3d05a
+// 圆周率
+// let pi = 3.14159265358979324;
+// let pi = M_PI;
+let pi = Double.pi
+let xpi: Double = pi * 3000.0 / 180.0
+
+// 地球的平均半径
+let r = 6371004
+let a: Double = 6378245.0
+//
+let e: Double = 0.00669342162296594323
+
+extension CLLocationCoordinate2D{
+    var CLLocationx: CLLocation{
+        return CLLocation(latitude: self.latitude, longitude: self.longitude)
+    }
+}
+
+extension CLLocationCoordinate2D {
+    var transToGCJ:CLLocationCoordinate2D{  return XYZLocationUtil.transformWGSToGCJ(wgsLocation: self) }
 }

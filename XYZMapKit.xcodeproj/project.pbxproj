@@ -14,7 +14,7 @@
 		D68F771629F6719D0074B75A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68F771429F6719D0074B75A /* Main.storyboard */; };
 		D68F771829F6719F0074B75A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68F771729F6719F0074B75A /* Assets.xcassets */; };
 		D68F771B29F6719F0074B75A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68F771929F6719F0074B75A /* LaunchScreen.storyboard */; };
-		D68F772529F674570074B75A /* LocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F772329F674570074B75A /* LocationUtil.swift */; };
+		D68F772529F674570074B75A /* XYZLocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F772329F674570074B75A /* XYZLocationUtil.swift */; };
 		D68F772629F674570074B75A /* XYZLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F772429F674570074B75A /* XYZLocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 		D68F771729F6719F0074B75A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D68F771A29F6719F0074B75A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D68F771C29F6719F0074B75A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D68F772329F674570074B75A /* LocationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUtil.swift; sourceTree = "<group>"; };
+		D68F772329F674570074B75A /* XYZLocationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZLocationUtil.swift; sourceTree = "<group>"; };
 		D68F772429F674570074B75A /* XYZLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZLocationManager.swift; sourceTree = "<group>"; };
 		E351E487EEBCFC0070E70F2A /* Pods_XYZMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYZMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,7 +99,7 @@
 		D68F772229F674570074B75A /* XYZLocationKit */ = {
 			isa = PBXGroup;
 			children = (
-				D68F772329F674570074B75A /* LocationUtil.swift */,
+				D68F772329F674570074B75A /* XYZLocationUtil.swift */,
 				D68F772429F674570074B75A /* XYZLocationManager.swift */,
 			);
 			path = XYZLocationKit;
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D68F772529F674570074B75A /* LocationUtil.swift in Sources */,
+				D68F772529F674570074B75A /* XYZLocationUtil.swift in Sources */,
 				D68F772629F674570074B75A /* XYZLocationManager.swift in Sources */,
 				D68F771329F6719D0074B75A /* VC_XYZMapKit.swift in Sources */,
 				D68F770F29F6719D0074B75A /* AppDelegate.swift in Sources */,
