@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59BB57FCF8D7552AD23A0098 /* Pods_XYZMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351E487EEBCFC0070E70F2A /* Pods_XYZMapKit.framework */; };
 		D68F770F29F6719D0074B75A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F770E29F6719D0074B75A /* AppDelegate.swift */; };
 		D68F771129F6719D0074B75A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F771029F6719D0074B75A /* SceneDelegate.swift */; };
 		D68F771329F6719D0074B75A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F771229F6719D0074B75A /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B92BC188D1CF63890C9CD8C /* Pods-XYZMapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYZMapKit.release.xcconfig"; path = "Target Support Files/Pods-XYZMapKit/Pods-XYZMapKit.release.xcconfig"; sourceTree = "<group>"; };
+		B7188996213AFDD96D0CD854 /* Pods-XYZMapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYZMapKit.debug.xcconfig"; path = "Target Support Files/Pods-XYZMapKit/Pods-XYZMapKit.debug.xcconfig"; sourceTree = "<group>"; };
 		D68F770B29F6719D0074B75A /* XYZMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYZMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68F770E29F6719D0074B75A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D68F771029F6719D0074B75A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D68F771729F6719F0074B75A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D68F771A29F6719F0074B75A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D68F771C29F6719F0074B75A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E351E487EEBCFC0070E70F2A /* Pods_XYZMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYZMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BB57FCF8D7552AD23A0098 /* Pods_XYZMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CFA8985BDD03509F58D13AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7188996213AFDD96D0CD854 /* Pods-XYZMapKit.debug.xcconfig */,
+				8B92BC188D1CF63890C9CD8C /* Pods-XYZMapKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C9A2D3C7AD443B8F080D843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E351E487EEBCFC0070E70F2A /* Pods_XYZMapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D68F770229F6719D0074B75A = {
 			isa = PBXGroup;
 			children = (
 				D68F770D29F6719D0074B75A /* XYZMapKit */,
 				D68F770C29F6719D0074B75A /* Products */,
+				6CFA8985BDD03509F58D13AD /* Pods */,
+				7C9A2D3C7AD443B8F080D843 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D68F771F29F6719F0074B75A /* Build configuration list for PBXNativeTarget "XYZMapKit" */;
 			buildPhases = (
+				190B700FB84B74715A3B9B9A /* [CP] Check Pods Manifest.lock */,
 				D68F770729F6719D0074B75A /* Sources */,
 				D68F770829F6719D0074B75A /* Frameworks */,
 				D68F770929F6719D0074B75A /* Resources */,
+				E12ADE9FE14061FCBA785A1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +130,7 @@
 				};
 			};
 			buildConfigurationList = D68F770629F6719D0074B75A /* Build configuration list for PBXProject "XYZMapKit" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		190B700FB84B74715A3B9B9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XYZMapKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12ADE9FE14061FCBA785A1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XYZMapKit/Pods-XYZMapKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XYZMapKit/Pods-XYZMapKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XYZMapKit/Pods-XYZMapKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D68F770729F6719D0074B75A /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		D68F772029F6719F0074B75A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7188996213AFDD96D0CD854 /* Pods-XYZMapKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		D68F772129F6719F0074B75A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B92BC188D1CF63890C9CD8C /* Pods-XYZMapKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
