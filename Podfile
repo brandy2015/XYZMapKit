@@ -11,6 +11,8 @@ target 'XYZMapKit' do
   pod 'SoHow'
   pod 'XYZResponse'                   # 触感反馈
   pod 'Alamofire'
+  
+  pod 'RxCoreLocation'
 end
 
 

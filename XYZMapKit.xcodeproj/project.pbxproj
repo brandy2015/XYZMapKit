@@ -16,6 +16,9 @@
 		D68F771B29F6719F0074B75A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68F771929F6719F0074B75A /* LaunchScreen.storyboard */; };
 		D68F772529F674570074B75A /* XYZLocationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F772329F674570074B75A /* XYZLocationUtil.swift */; };
 		D68F772629F674570074B75A /* XYZLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F772429F674570074B75A /* XYZLocationManager.swift */; };
+		D6A848C829F68A1400B8CDA9 /* VC_XYZCoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A848C729F68A1400B8CDA9 /* VC_XYZCoreLocation.swift */; };
+		D6E4A11729F67A7500077B6C /* XYZMKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A11629F67A7500077B6C /* XYZMKPointAnnotation.swift */; };
+		D6E4A11929F6876E00077B6C /* XYZLocation_gpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A11829F6876E00077B6C /* XYZLocation_gpt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		D68F771C29F6719F0074B75A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D68F772329F674570074B75A /* XYZLocationUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZLocationUtil.swift; sourceTree = "<group>"; };
 		D68F772429F674570074B75A /* XYZLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZLocationManager.swift; sourceTree = "<group>"; };
+		D6A848C729F68A1400B8CDA9 /* VC_XYZCoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_XYZCoreLocation.swift; sourceTree = "<group>"; };
+		D6E4A11629F67A7500077B6C /* XYZMKPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYZMKPointAnnotation.swift; sourceTree = "<group>"; };
+		D6E4A11829F6876E00077B6C /* XYZLocation_gpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYZLocation_gpt.swift; sourceTree = "<group>"; };
 		E351E487EEBCFC0070E70F2A /* Pods_XYZMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYZMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,9 +90,9 @@
 		D68F770D29F6719D0074B75A /* XYZMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4A11A29F6890800077B6C /* XYZCoreLocation_rx */,
 				D68F770E29F6719D0074B75A /* AppDelegate.swift */,
 				D68F771029F6719D0074B75A /* SceneDelegate.swift */,
-				D68F771229F6719D0074B75A /* VC_XYZMapKit.swift */,
 				D68F772229F674570074B75A /* XYZLocationKit */,
 				D68F771429F6719D0074B75A /* Main.storyboard */,
 				D68F771729F6719F0074B75A /* Assets.xcassets */,
@@ -99,10 +105,21 @@
 		D68F772229F674570074B75A /* XYZLocationKit */ = {
 			isa = PBXGroup;
 			children = (
+				D68F771229F6719D0074B75A /* VC_XYZMapKit.swift */,
 				D68F772329F674570074B75A /* XYZLocationUtil.swift */,
 				D68F772429F674570074B75A /* XYZLocationManager.swift */,
+				D6E4A11629F67A7500077B6C /* XYZMKPointAnnotation.swift */,
+				D6E4A11829F6876E00077B6C /* XYZLocation_gpt.swift */,
 			);
 			path = XYZLocationKit;
+			sourceTree = "<group>";
+		};
+		D6E4A11A29F6890800077B6C /* XYZCoreLocation_rx */ = {
+			isa = PBXGroup;
+			children = (
+				D6A848C729F68A1400B8CDA9 /* VC_XYZCoreLocation.swift */,
+			);
+			path = XYZCoreLocation_rx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A848C829F68A1400B8CDA9 /* VC_XYZCoreLocation.swift in Sources */,
 				D68F772529F674570074B75A /* XYZLocationUtil.swift in Sources */,
+				D6E4A11929F6876E00077B6C /* XYZLocation_gpt.swift in Sources */,
 				D68F772629F674570074B75A /* XYZLocationManager.swift in Sources */,
 				D68F771329F6719D0074B75A /* VC_XYZMapKit.swift in Sources */,
+				D6E4A11729F67A7500077B6C /* XYZMKPointAnnotation.swift in Sources */,
 				D68F770F29F6719D0074B75A /* AppDelegate.swift in Sources */,
 				D68F771129F6719D0074B75A /* SceneDelegate.swift in Sources */,
 			);

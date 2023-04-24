@@ -1,11 +1,8 @@
-//
-//  LocationManager.swift
-//  TestLocation
-//
-//  Created by zhangzihao on 2022/2/8.
-//
-// 第一步 引入api
+ 
 import CoreLocation
+
+import RxCocoa
+import RxSwift
 
 public class XYZLocationManager: NSObject{
     // 单例方法
@@ -14,9 +11,10 @@ public class XYZLocationManager: NSObject{
         // setup code
         return instance
     }()
-
-    var locationManager: CLLocationManager?
-
+    var locationManager        : CLLocationManager?
+    var GPS_Current            : BehaviorRelay<CLLocationCoordinate2D?> = BehaviorRelay(value:nil)
+    var CLPlacemark_Current    : BehaviorRelay<CLPlacemark?>            = BehaviorRelay(value:nil)
+     
     var GetTheGPS:((_ GPS:  CLLocationCoordinate2D)->())? = nil
     public var coordinate: CLLocationCoordinate2D? = nil
     
@@ -42,7 +40,6 @@ public class XYZLocationManager: NSObject{
         print("停止了")
 //        self.locationManager = nil
     }
-
     // 开始尝试获取定位
     public func startRequestLocation() {
         self.locationManager?.requestWhenInUseAuthorization()
@@ -53,9 +50,6 @@ public class XYZLocationManager: NSObject{
             locationManager?.startUpdatingLocation()
         }
     }
-
-   
-
 }
 // 实现代理
 extension XYZLocationManager: CLLocationManagerDelegate {
@@ -63,14 +57,22 @@ extension XYZLocationManager: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location   = locations.last ?? CLLocation.init()
         let coordinate = location.coordinate.transToGCJ
-//        let latitude   = coordinate.latitude;
-//        let longitude  = coordinate.longitude;
+        //        let latitude   = coordinate.latitude;
+        //        let longitude  = coordinate.longitude;
         // TODO... 实现自己的业务
         // 注意，这里获取到的是标准坐标。WGS-84标准
-        
-        self.coordinate = coordinate
-        
-        self.GetTheGPS?(coordinate)
+        //        self.coordinate = coordinate
+        self.GPS_Current.accept(coordinate)
+        //        self.GetTheGPS?(coordinate)
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(coordinate.CLLocationx, completionHandler: { [weak self] placemarks, error in
+            guard let self = self else{return}
+            if error == nil && (placemarks?.count ?? 0) > 0 {
+                guard let placeMark = placemarks?.last else{return}
+                
+                self.CLPlacemark_Current.accept(placeMark)
+            }
+        })
     }
     
     // 代理方法，当定位授权更新时回调
@@ -92,14 +94,15 @@ extension XYZLocationManager: CLLocationManagerDelegate {
             
         }
     }
-
+    
     // 当获取定位出错时调用
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // 这里应该停止调用api
         self.locationManager?.stopUpdatingLocation()
     }
-
+    
 }
+
 import MapKit
 
 public extension MKMapView {
@@ -140,7 +143,6 @@ public extension CLPlacemark{
         return place + place2
     }
 }
-
 //func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //    if let location = locations.last{
 //        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
