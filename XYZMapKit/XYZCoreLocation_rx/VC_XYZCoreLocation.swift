@@ -1,25 +1,26 @@
   
 import UIKit
-
- 
-
-
+  
 class VC_XYZCoreLocation: UIViewController {
     
     
     var manager :CLLocationManager!
     
     var disposeBag              = DisposeBag()
-     
+    
     var CLPlacemark_Current    : BehaviorRelay<CLPlacemark?>            = BehaviorRelay(value:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.Location_Configure()
+        
+        self.BTN_Configure()
+        
+        
+        
     }
-    
-    
+     
 }
 
 import RxSwift
@@ -31,6 +32,8 @@ import MapKit
 extension VC_XYZCoreLocation{
     
     var View_Map           : MKMapView!       { return self.view.viewWithTag(1110001)     as? MKMapView          }
+    
+    var BTN_GPS            : UIButton!        { return self.view.viewWithTag(2220001)     as? UIButton          }
     
     func Location_Configure(){
         self.manager = CLLocationManager()
@@ -140,4 +143,19 @@ extension VC_XYZCoreLocation{
         
     }
     
+    func GetPlacemark(){
+        guard let CLPlacemark_Current = self.CLPlacemark_Current.value else{return}
+        
+        print("CLPlacemark_Current\(CLPlacemark_Current)")
+        
+    }
+    
+    func BTN_Configure(){
+        self.BTN_GPS.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else{return}
+                self.GetPlacemark()
+            })
+            .disposed(by: disposeBag)
+    }
 }
