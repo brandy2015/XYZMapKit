@@ -1,24 +1,38 @@
   
 import UIKit
-import RxSwift
-import RxCocoa
 
-import MapKit
-import SoHow
+ 
 
-import RxCoreLocation
-import RxMKMapView
+
 class VC_XYZCoreLocation: UIViewController {
     
-    var View_Map           : MKMapView!       { return self.view.viewWithTag(1110001)     as? MKMapView          }
     
     var manager :CLLocationManager!
     
     var disposeBag              = DisposeBag()
+     
+    var CLPlacemark_Current    : BehaviorRelay<CLPlacemark?>            = BehaviorRelay(value:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.Location_Configure()
+    }
+    
+    
+}
+
+import RxSwift
+import RxCocoa
+import RxCoreLocation
+import RxMKMapView
+import MapKit
+
+extension VC_XYZCoreLocation{
+    
+    var View_Map           : MKMapView!       { return self.view.viewWithTag(1110001)     as? MKMapView          }
+    
+    func Location_Configure(){
         self.manager = CLLocationManager()
         
         /// Setup CLLocationManager
@@ -27,7 +41,12 @@ class VC_XYZCoreLocation: UIViewController {
         
         self.manager.rx
             .placemark
-            .subscribe(onNext: { placemark in
+            .subscribe(onNext: { [weak self] placemark in
+                
+                guard let self = self else{return}
+                
+                self.CLPlacemark_Current.accept(placemark)
+                
                 
                 print("placemark",placemark)
                 print("placemarkname",placemark.name)
