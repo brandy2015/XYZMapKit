@@ -13,8 +13,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/brandy2015/XYZMapKit.git", :tag => "0.1.3" }  # Git 地址
 
   # 平台支持
-  s.ios.deployment_target = "15.0"                 # 支持的最低 iOS 系统版本
-  s.swift_version = "5.0"                          # Swift 版本
+    s.swift_version = "5.0"                          # Swift 版本
+  s.ios.deployment_target = "13.0"                 # 支持的最低 iOS 系统版本
+  
 
   # 源代码
   s.source_files = "XYZMapKit/XYZLocationKit/*"        # 包含的源码路径
