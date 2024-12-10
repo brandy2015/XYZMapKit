@@ -395,6 +395,7 @@
 				DEVELOPMENT_TEAM = 9GZYHL8TWB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XYZMapKit/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "定位需要权限";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "定位需要权限";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "定位需要权限";
@@ -428,6 +429,7 @@
 				DEVELOPMENT_TEAM = 9GZYHL8TWB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XYZMapKit/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "定位需要权限";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "定位需要权限";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "定位需要权限";
