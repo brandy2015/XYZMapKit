@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # 基本信息
   s.name         = "XYZMapKit"                      # Pod 名称
-  s.version      = "0.1.0"                          # 当前版本
+  s.version      = "0.1.1"                          # 当前版本
   s.summary      = "A lightweight map toolkit with RxSwift integration."  # 简短描述
   s.description  = <<-DESC
     XYZMapKit 是一个基于 RxSwift 的地图工具包，提供高效的定位、地图显示和事件响应封装功能，
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/brandy2015/XYZMapKit"  # 项目主页
   s.license      = { :type => "MIT", :file => "LICENSE" }       # 许可证
   s.author       = { "Brando" => "zhangqianbrandy2012@gmail.com" }  # 作者信息
-  s.source       = { :git => "https://github.com/brandy2015/XYZMapKit.git", :tag => "1.0.0" }  # Git 地址
+  s.source       = { :git => "https://github.com/brandy2015/XYZMapKit.git", :tag => "0.1.1" }  # Git 地址
 
   # 平台支持
   s.ios.deployment_target = "14.0"                 # 支持的最低 iOS 系统版本
